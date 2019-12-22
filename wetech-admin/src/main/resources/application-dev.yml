@@ -1,0 +1,28 @@
+debug: true
+logging:
+  level:
+    root: debug
+    tech:
+      wetech:
+        admin:
+          mapper: trace
+server:
+  port: 8080
+  servlet:
+    context-path: /wetech-admin
+spring:
+  datasource:
+    db-type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      stat-view-servlet:
+        allow: true
+      test-on-borrow: true
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/wetech_admin
+    username: root
+  thymeleaf:
+    cache: false
